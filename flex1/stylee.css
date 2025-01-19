@@ -9,11 +9,11 @@
   border: 1px solid black;
   margin-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .box {
