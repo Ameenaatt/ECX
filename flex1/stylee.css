@@ -5,48 +5,58 @@
 }
 
 .container {
-  height: 80vh;
+  min-height: 70vh;
   border: 1px solid black;
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .box {
-  height: 4rem;
-  width: 4rem;
+  height: 50px;
+  width: 50px;
 }
 
 .box1 {
   background-color: green;
+  flex: 2 1 200px;
 }
 
 .box2 {
   background-color: blue;
+  flex: 1 1 40px;
 }
 
 .box3 {
   background-color: red;
+  flex: 1 1 40px;
 }
 
 .box4 {
   background-color: palegreen;
+  flex: 1 1 40px;
 }
 
 .box5 {
   background-color: purple;
+  flex: 1 1 40px;
 }
 
 .box6 {
   background-color: orange;
+  flex: 2 1 150px;
 }
 
 .box7 {
   background-color: olivedrab;
+  flex: 1 1 40px;
 }
 
 .box8 {
   background-color: brown;
+  flex: 1 1 40px;
 }
