@@ -23,12 +23,12 @@
 
 .box1 {
   background-color: green;
-  flex: 2 1 200px;
+  flex: 1 2 200px;
 }
 
 .box2 {
-  background-color: blue;
-  flex: 1 1 40px;
+  background-color: green;
+  flex: 1 2 150px;
 }
 
 .box3 {
@@ -37,26 +37,24 @@
 }
 
 .box4 {
-  background-color: palegreen;
+  background-color: orange;
   flex: 1 1 40px;
 }
 
 .box5 {
-  background-color: purple;
+  background-color: red;
   flex: 1 1 40px;
 }
 
 .box6 {
-  background-color: orange;
-  flex: 2 1 150px;
+  background-color: green;
+  flex: 1 2 200px;
 }
 
 .box7 {
-  background-color: olivedrab;
-  flex: 1 1 40px;
+  background-color: red;
 }
 
 .box8 {
-  background-color: brown;
-  flex: 1 1 40px;
+  background-color: orange;
 }
