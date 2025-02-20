@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="tic.css" />
+  </head>
+  <body>
+    <div id="player-selection" class="player-selection">
+      <div class="main">
+        <div class="logo-container">
+          <div class="logo">X</div>
+          <div class="logo-2">O</div>
+        </div>
+        <h2>PICK PLAYER 1'S MARK</h2>
+        <div class="mark-selection">
+          <button id="select-x" class="mark-button">X</button>
+          <button id="select-o" class="mark-button">O</button>
+        </div>
+        <p>REMEMBER: X GOES FIRST</p>
+        <div class="game-mode">
+          <button id="vs-cpu" class="mode-buttonn">NEW GAME (VS CPU)</button>
+          <button id="vs-player" class="mode-button">
+            NEW GAME (VS PLAYER)
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header">
+        <div class="logo-container">
+          <div class="logo">X</div>
+          <div class="logo-2">O</div>
+        </div>
+        <div class="turn-indicator">X's Turn</div>
+        <button id="restartButton">&#x21bb;</button>
+        <div class="modal-overlay" id="modalOverlay">
+          <div class="modal" id="modal">
+            <h1>RESTART GAME?</h1>
+            <div class="modal-buttons">
+              <button id="noButton">NO, CANCEL</button>
+              <button id="yesButton">YES, RESTART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div class="scoreboard">
+        <div class="score x-score">
+          <span>X (YOU)</span>
+          <span class="score-value">0</span>
+        </div>
+        <div class="score ties">
+          <span>TIES</span>
+          <span class="score-value">0</span>
+        </div>
+        <div class="score o-score">
+          <span>O (CPU)</span>
+          <span class="score-value">0</span>
+        </div>
+      </div>
+    </div>
+    <div id="game-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-message">You Won</span>
+        <button id="quit-button">QUIT</button>
+        <button id="next-round-button">NEXT ROUND</button>
+      </div>
+    </div>
+    <script src="tic.js"></script>
+  </body>
+</html>
