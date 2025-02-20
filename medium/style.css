@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header nav a:last-child {
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+main {
+  padding: 50px 20px;
+}
+.hero {
+  margin-bottom: 50px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer {
+  padding: 20px;
+}
+footer nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #757575;
+}

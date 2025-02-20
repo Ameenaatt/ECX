@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.country {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.country-name {
+  color: #1abc9c;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.country-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.known-for {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.known-for-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #444;
+}
+
+.known-for-list li {
+  margin-bottom: 10px;
+}
