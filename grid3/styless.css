@@ -4,14 +4,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 40px);
   gap: 10px;
-  /* background-color: #333; */
 }
-
-/* .container {
-  border: 1px solid rgb(12, 1, 1);
-  padding: 10px;
-  color: white;
-} */
 
 .item1 {
   background-color: green;
