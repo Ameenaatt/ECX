@@ -83,6 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
     container.style.display = "none";
     currentPlayer = player1Mark;
     turnIndicator.textContent = `${currentPlayer}'s Turn`;
+
+    scores = { X: 0, O: 0, Ties: 0 };
+    updateScoreboard(); // Update the scoreboard display
+
+    // Hide the modal
+    modal.style.display = "none";
+
+    // Show the player selection screen
+    playerSelection.style.display = "block";
+    container.style.display = "none";
   }
   const winningConditions = [
     [0, 1, 2],
@@ -108,6 +118,33 @@ document.addEventListener("DOMContentLoaded", function () {
     clickedCell.classList.add(currentPlayer.toLowerCase());
 
     checkForWinner();
+
+    if (gameActive) {
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      turnIndicator.textContent = `${currentPlayer}'s Turn`;
+
+      // If in CPU mode and it's the CPU's turn, trigger CPU move
+      if (gameMode === "cpu" && currentPlayer === "O") {
+        setTimeout(cpuMove, 500); // Delay CPU move for better UX
+      }
+    }
+  }
+
+  //
+  function cpuMove() {
+    let availableCells = gameState
+      .map((cell, index) => (cell === "" ? index : null))
+      .filter((index) => index !== null);
+    if (availableCells.length > 0) {
+      const randomCellIndex =
+        availableCells[Math.floor(Math.random() * availableCells.length)];
+      gameState[randomCellIndex] = currentPlayer;
+      cells[randomCellIndex].textContent = currentPlayer;
+      cells[randomCellIndex].classList.add(currentPlayer.toLowerCase());
+      checkForWinner();
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      turnIndicator.textContent = `${currentPlayer}'s Turn`;
+    }
   }
 
   function checkForWinner() {
@@ -147,8 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    turnIndicator.textContent = `${currentPlayer}'s Turn`;
+    // currentPlayer = currentPlayer === "X" ? "O" : "X";
+    // turnIndicator.textContent = `${currentPlayer}'s Turn`;
   }
 
   function updateScoreboard() {
@@ -183,6 +220,15 @@ document.addEventListener("DOMContentLoaded", function () {
       cell.classList.remove("x", "o");
     });
     modal.style.display = "none";
+    scores = { X: 0, O: 0, Ties: 0 };
+    updateScoreboard(); // Update the scoreboard display
+
+    // Hide the modal
+    modal.style.display = "none";
+
+    // Show the player selection screen
+    playerSelection.style.display = "block";
+    container.style.display = "none";
   });
 
   cells.forEach((cell) => cell.addEventListener("click", handleCellClick));
